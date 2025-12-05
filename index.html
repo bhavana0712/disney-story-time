@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney Princesses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <div class="app-shell">
+            <header class="app-header">
+                <div class="brand">Disney Princesses</div>
+                <label class="search-bar">
+                    <span class="search-icon" aria-hidden="true"></span>
+                    <input type="search" placeholder="Search princess…" aria-label="Search princess">
+                </label>
+                <button class="menu-toggle" type="button" aria-label="Open menu">
+                    <span class="menu-text">Menu</span>
+                    <span class="menu-dot"></span>
+                    <span class="menu-dot"></span>
+                    <span class="menu-dot"></span>
+                </button>
+            </header>
+
+            <main class="app-content">
+                <section class="view-panel main-view is-active" id="mainView">
+                    <div class="slider-area">
+                        <div class="slider-window" id="sliderWindow">
+                            <div class="cards-track" id="cardsTrack" role="list"></div>
+                        </div>
+                        <div class="slider-controls">
+                            <button class="nav-button" id="prevBtn" type="button" aria-label="Show previous princesses">
+                                <span aria-hidden="true">&#9664;</span>
+                                Prev
+                            </button>
+                            <button class="nav-button" id="nextBtn" type="button" aria-label="Show next princesses">
+                                Next
+                                <span aria-hidden="true">&#9654;</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="view-panel detail-view" id="detailView" aria-hidden="true">
+                    <div class="detail-vertical-label" id="detailVerticalLabel"></div>
+                    <div class="detail-main">
+                        <div class="detail-media" id="detailMedia">
+                            <img id="detailImage" src="" alt="Selected princess">
+                        </div>
+                        <article class="detail-info">
+                            <button class="close-detail" id="closeDetailBtn" type="button">X Close</button>
+                            <h2 class="detail-name" id="detailName"></h2>
+                            <p class="detail-movie" id="detailMovie"></p>
+                            <p class="detail-description" id="detailDescription"></p>
+                            <h3 class="clips-title">Clips</h3>
+                            <div class="clip-grid" id="clipGrid"></div>
+                        </article>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
